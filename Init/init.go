@@ -10,7 +10,7 @@ import (
 )
 
 func Init(name string) {
-	conf, err := InitReader(`D:\\workspace-go\\src\\btspider\\config.ini`)
+	conf, err := InitReader(`config.ini`)
 	if err != nil {
 		log.Fatal(err)
 	}
