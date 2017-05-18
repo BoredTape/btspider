@@ -108,6 +108,9 @@ func keywithoutpoint(line string) (string, string) {
 	key := getstringwithspace(key_source)
 	value := getstringwithspace(value_source)
 	value = value[:len(value)-1]
+	if len(value) < 1 {
+		return key, value
+	}
 	if value[len(value)-1:] == "\r" {
 		value = value[:len(value)-1]
 	}
