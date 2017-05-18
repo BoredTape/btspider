@@ -12,5 +12,6 @@ func (s *spider) Open(args Request) *httppool.Respond {
 	request.Form = args.Form
 	request.Proxy = args.Proxy
 	request.Cookiejar = args.Cookiejar
+	request.Timeout=args.Timeout
 	return s.Pool.Open(request)
 }

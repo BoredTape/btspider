@@ -19,4 +19,5 @@ type Request struct {
 	Form      map[string]string
 	Proxy     string
 	Cookiejar []*http.Cookie
+	Timeout   int
 }
